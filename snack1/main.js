@@ -8,7 +8,7 @@ const automobili = [
     {
         marca: 'marca1',
         modello: 'modello1',
-        alimentazione: 'benzina'
+        alimentazione: 'elettrica'
     },
     {
         marca: 'marca2',
@@ -63,19 +63,19 @@ const autoBenzina = automobili.filter(automobile => {
 console.log(autoBenzina);
 
 
-const autoGpl = automobili.filter(automobile => {
-    if (automobile.alimentazione === 'gpl') {
-        return true
-
-    }
-});
-console.log(autoGpl);
-
-
 const autoDiesel = automobili.filter(automobile => {
-    if (automobile.alimentazione !== 'gpl' && automobile.alimentazione !== 'benzina') {
+    if (automobile.alimentazione === 'diesel') {
         return true
 
     }
 });
 console.log(autoDiesel);
+
+
+const autoDiverse = automobili.filter(automobile => {
+    if (automobile.alimentazione !== 'diesel' && automobile.alimentazione !== 'benzina') {
+        return true
+
+    }
+});
+console.log(autoDiverse);
