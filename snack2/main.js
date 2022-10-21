@@ -4,9 +4,17 @@ Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘
 const nomi = ['Anna', 'FRANCESCO', 'alessandro']
 
 //trasformo tutti i nomi in lowercase 
-const newNomi = nomi.map((nome) => {
+const lowercaseNomi = nomi.map((nome) => {
     return nome.toLocaleLowerCase()
 });
 
-console.log(newNomi);
+console.log(lowercaseNomi);
+
+
+const newNome = lowercaseNomi.map((newnome) => {
+    return newnome.charAt(0).toLocaleUpperCase();
+})
+
+console.log(newNome);
+
 
