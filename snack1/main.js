@@ -52,9 +52,30 @@ const automobili = [
 ]
 
 
+
+
 const autoBenzina = automobili.filter(automobile => {
-    if (automobili.alimentazione === 'benzina') {
+    if (automobile.alimentazione === 'benzina') {
         return true
+
     }
 });
 console.log(autoBenzina);
+
+
+const autoGpl = automobili.filter(automobile => {
+    if (automobile.alimentazione === 'gpl') {
+        return true
+
+    }
+});
+console.log(autoGpl);
+
+
+const autoDiesel = automobili.filter(automobile => {
+    if (automobile.alimentazione !== 'gpl' && automobile.alimentazione !== 'benzina') {
+        return true
+
+    }
+});
+console.log(autoDiesel);
